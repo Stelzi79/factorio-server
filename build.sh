@@ -40,3 +40,12 @@ echo -e $GREEN"Downloading ...\r\n\t"$YELLOW"https://factorio.com/get-download/$
 #exit 0
 
 curl -L --progress-bar "https://factorio.com/get-download/${factorio_version}/headless/linux64" -o "./bin/factorio_headless.tar.xz"
+
+# Extracting Factorio headless server
+if [ -d "./bin/factorio" ]; then
+	echo -e $GREEN"Directory already exists: ./bin/factorio!\r\n\t"$YELLOW"deleting ./bin/factorio ..."$NC
+	rm -rf "./bin/factorio"
+fi
+
+echo -e $GREEN"Extracting ...\r\n\t"$YELLOW"./bin/factorio_headless.tar.xz"$NC
+tar -xf "./bin/factorio_headless.tar.xz" -C "./bin"
