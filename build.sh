@@ -3,7 +3,6 @@
 source .env
 # source .secrets
 
-
 # Getting Arguments
 # while getopts ku flag; do
 # 	case "${flag}" in
@@ -30,4 +29,4 @@ if [ ! -d "./config" ]; then
 fi
 
 # Deleting the old stuff because the Repo https://github.com/factoriotools/factorio-docker does everything!
-
+# DockerHub: https://hub.docker.com/r/factoriotools/factorio/
